@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://unpkg.com/feather-icons"></script>
+</head>
+
+<body>
+    <div class="btn">
+        <span> <i data-feather="align-justify"></i></span>
+    </div>
+
+    <nav class="sideBar">
+        <div class="text">Sérgio<span>Almeida</span></div>
+        <ul>
+            <li><a href="#"><i data-feather="database"></i>Dashboard</a></li>
+            <li><a href="#"><i data-feather="shopping-bag"></i>Produtos</a></li>
+            <li>
+                <a href="#"><i data-feather="settings"></i>Configurações</a>
+            </li>
+        </ul>
+    </nav>
+
+    <section class="grid">
+        <div class="grid__item valores">
+            <div class="valor">
+
+                <div class="valor__item">
+                    <span> 
+                        <i data-feather="dollar-sign"></i>
+                    </span>
+                    <div class="valor__info">
+                        <h2>1,998</h2>
+                        <p>Total de vendas</p>
+                    </div>
+                </div>
+
+                <div class="valor__item">
+                    <span> 
+                        <i data-feather="dollar-sign"></i>
+                    </span>
+                    <div class="valor__info">
+                        <h2>1,998</h2>
+                        <p>Total de vendas</p>
+                    </div>
+                </div>
+
+                <div class="valor__item">
+                    <span> 
+                        <i data-feather="dollar-sign"></i>
+                    </span>
+                    <div class="valor__info">
+                        <h2>1,998</h2>
+                        <p>Total de vendas</p>
+                    </div>
+                </div>
+
+                <div class="valor__item">
+                    <span> 
+                        <i data-feather="dollar-sign"></i>
+                    </span>
+                    <div class="valor__info">
+                        <h2>1,998</h2>
+                        <p>Total de vendas</p>
+                    </div>
+                </div>
+
+            </div>
+            <div class="grafico">
+                <canvas id="myChart"></canvas>
+            </div>
+        </div>
+        <div class="grid__item tables">
+            <!-- TABLE ORDERS -->
+            <div class="orders">
+                <h3>Ações</h3>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Nome</th>
+                            <th>Qt. Ações</th>
+                        </tr>
+                    </thead>
+                    <tbody id="tableBody">
+
+                    </tbody>
+                </table>
+            </div>
+
+            <div class="custumer">
+                <h3>Nome das Industrias</h3>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Rank</th>
+                            <th>Usuario</th>
+                            <th>Total Preço</th>
+                            <th>Data</th>
+                        </tr>
+                    </thead>
+                    <tbody id="customer">
+
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+    </section>
+
+
+
+
+
+    <script src="assets/js/script.js"></script>
+    <script src="assets/js/main.js"></script>
+
+</body>
+
+</html>

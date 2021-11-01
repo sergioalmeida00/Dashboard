@@ -1,0 +1,234 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;500;700&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+:root {
+    --second-bg-dark: #202020;
+    --main-bg-dark: #2d2d2d;
+    --box-shadow-dark: rgba(0, 0, 0, 0.2) 0px 5px 10px;
+}
+
+.sideBar {
+    position: fixed;
+    width: 250px;
+    height: 100%;
+    left: -250px;
+    background: #1b1b1b;
+    color: white;
+    transition: left 0.4s ease;
+}
+
+.sideBar.show {
+    left: 0px;
+}
+
+.btn {
+    position: absolute;
+    left: 1.5rem;
+    top: 1rem;
+    background-color: var(--main-bg-dark);
+    padding: .4rem;
+    text-align: center;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: .4s;
+}
+
+.btn.click {
+    left: 260px;
+}
+
+.btn span {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.btn span svg {
+    color: white;
+}
+
+.showSvg {
+    display: none;
+}
+
+.btn.click span::before {
+    content: '\2715';
+    font-size: 1.5rem;
+    color: white;
+}
+
+.text {
+    font-size: 1.5rem;
+    line-height: 4rem;
+    text-align: center;
+    background-color: #1e1e1e;
+    font-weight: 700;
+}
+
+.text span {
+    color: cyan;
+}
+
+.sideBar ul {
+    padding: 0 .3rem;
+    list-style: none;
+    height: 100%;
+    width: 100%;
+}
+
+.sideBar ul li {
+    line-height: 3rem;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.sideBar ul li a {
+    display: flex;
+    justify-content: start;
+    gap: 1rem;
+    align-items: center;
+    color: white;
+    text-decoration: none;
+    padding-left: 2rem;
+    font-size: 1.3rem;
+    font-weight: 300;
+    width: 100%;
+    border-left: 3px solid transparent;
+}
+
+.sideBar ul li a:hover {
+    color: cyan;
+    background-color: #1e1e1e;
+    border-left: 3px solid cyan;
+}
+
+
+/* ==================== SECTION GRID  =============================*/
+
+.grid {
+    padding-top: 4rem;
+    display: grid;
+    grid-template-areas: "valores" "tables";
+    /* height: 100%; */
+    background-color: var(--second-bg-dark);
+    transition: .4s;
+}
+
+.grid.actionMargin {
+    margin-left: 15.6rem;
+}
+
+.grid__item {
+    padding: .5rem;
+}
+
+
+/* ==================== GRID ITENS valores =============================*/
+
+.valores {
+    grid-area: valores;
+    display: grid;
+    grid-template-areas: "financeiro grafico";
+    grid-template-columns: 1fr 60rem;
+    gap: 1rem;
+}
+
+.valor {
+    grid-area: financeiro;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.valor__item {
+    display: flex;
+    justify-content: center;
+    font-size: 1rem;
+    padding: 1rem;
+    gap: 1rem;
+    border-radius: 0 5px 5px 0;
+    border-left: 3px solid cyan;
+    color: white;
+    align-items: center;
+    background-color: var(--main-bg-dark);
+}
+
+.grafico {
+    grid-area: grafico;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: .5rem;
+    border-radius: 5px;
+    background-color: var(--main-bg-dark);
+}
+
+
+/* ==================== GRID ITENS Tables =============================*/
+
+.tables {
+    grid-area: tables;
+    display: grid;
+    grid-template-columns: 25rem 2fr;
+    gap: 1rem;
+}
+
+.tables h3 {
+    color: white;
+    margin-bottom: 1rem;
+}
+
+.orders {
+    border-radius: 5px;
+    padding: .5rem;
+    background-color: var(--main-bg-dark);
+}
+
+.custumer {
+    border-radius: 5px;
+    padding: .5rem;
+    background-color: var(--main-bg-dark);
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    color: white;
+}
+
+table thead tr th {
+    background-color: var(--second-bg-dark);
+    text-align: left;
+    padding: .4rem;
+}
+
+table thead tr th:last-child,
+table tbody td:last-child {
+    text-align: right;
+}
+
+table tbody td {
+    font-weight: 300;
+    padding: .5rem .5rem 0 .5rem;
+}
+
+table tbody tr:hover {
+    background-color: var(--second-bg-dark);
+}
+
+@media(max-width:1200px) {
+    .valores {
+        grid-template-areas: "financeiro" "grafico";
+        grid-template-columns: auto;
+    }
+    .grafico {
+        grid-template-columns: auto;
+    }
+    .tables {
+        grid-template-columns: auto;
+    }
+}
