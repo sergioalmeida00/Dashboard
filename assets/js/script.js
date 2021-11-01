@@ -1,15 +1,10 @@
 const ctx = document.getElementById('myChart');
-ctx.style.width = '640px';
-ctx.style.height = '320px';
-
-
-const URLAPI = 'https://forbes400.herokuapp.com/api/forbes400?limit=10';
+const URLAPI = 'https://forbes400.herokuapp.com/api/forbes400?limit=5';
 const btnClick = document.querySelector('#addDash');
 
 
 function buildDash(labels, values, chartTitle) {
     let myDataDash = new Chart(ctx, {
-        responsive: false,
         type: 'bar',
         data: {
             labels: labels,
@@ -22,7 +17,6 @@ function buildDash(labels, values, chartTitle) {
             }]
         },
         options: {
-            responsive: true,
             maintainAspectRatio: false,
             scales: {
                 X: {

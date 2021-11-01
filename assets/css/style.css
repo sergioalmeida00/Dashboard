@@ -110,16 +110,22 @@
 /* ==================== SECTION GRID  =============================*/
 
 .grid {
-    padding-top: 4rem;
     display: grid;
-    grid-template-areas: "valores" "tables";
-    /* height: 100%; */
+    grid-template-areas: "valores valores" "tables tables";
+    grid-template-columns: 300px 3fr;
+    padding-top: 4rem;
     background-color: var(--second-bg-dark);
     transition: .4s;
 }
 
 .grid.actionMargin {
     margin-left: 15.6rem;
+}
+
+@media(max-width:500px) {
+    .grid.actionMargin {
+        margin-left: 0;
+    }
 }
 
 .grid__item {
@@ -133,7 +139,8 @@
     grid-area: valores;
     display: grid;
     grid-template-areas: "financeiro grafico";
-    grid-template-columns: 1fr 60rem;
+    /* grid-template-columns: 1fr auto; */
+    grid-template-columns: 1fr minmax(200px, 70%);
     gap: 1rem;
 }
 
@@ -158,6 +165,7 @@
 }
 
 .grafico {
+    width: 100%;
     grid-area: grafico;
     display: flex;
     align-items: center;
@@ -169,30 +177,6 @@
 
 
 /* ==================== GRID ITENS Tables =============================*/
-
-.tables {
-    grid-area: tables;
-    display: grid;
-    grid-template-columns: 25rem 2fr;
-    gap: 1rem;
-}
-
-.tables h3 {
-    color: white;
-    margin-bottom: 1rem;
-}
-
-.orders {
-    border-radius: 5px;
-    padding: .5rem;
-    background-color: var(--main-bg-dark);
-}
-
-.custumer {
-    border-radius: 5px;
-    padding: .5rem;
-    background-color: var(--main-bg-dark);
-}
 
 table {
     width: 100%;
@@ -220,10 +204,40 @@ table tbody tr:hover {
     background-color: var(--second-bg-dark);
 }
 
-@media(max-width:1200px) {
-    .valores {
-        grid-template-areas: "financeiro" "grafico";
+.tables {
+    grid-area: tables;
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+    gap: 1rem;
+}
+
+.tables h3 {
+    color: white;
+    margin-bottom: 1rem;
+}
+
+.orders {
+    border-radius: 5px;
+    padding: .5rem;
+    background-color: var(--main-bg-dark);
+    overflow-x: auto;
+}
+
+.custumer {
+    border-radius: 5px;
+    padding: .5rem;
+    background-color: var(--main-bg-dark);
+    overflow-x: auto;
+}
+
+@media(max-width:1000px) {
+    .grid {
+        grid-template-areas: "valores" "tables";
         grid-template-columns: auto;
+    }
+    .valores {
+        grid-template-areas: "financeiro" "grafico ";
+        grid-template-columns: minmax(200px, 100%);
     }
     .grafico {
         grid-template-columns: auto;
