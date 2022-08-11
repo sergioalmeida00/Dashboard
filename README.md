@@ -1,5 +1,3 @@
-# dashboard
-# relogioDecubito01
 # 💻 Sobre Aplicação
 
 Neste Desenvolvimento foi utilizado as seguintes staks:
