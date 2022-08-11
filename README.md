@@ -5,10 +5,11 @@
 Neste Desenvolvimento foi utilizado as seguintes staks:
 
 - Usado o HTML + CSS
-- JavaScript - Vanilla
+- JavaScript
+- Chart js
 
-## O que é Decubito? 
-- A aplicação tem o intuito de ajudar os profissionais da saude no acompanhamento da mudança de posição do paciente conforme o determinado horario!
+## Sobre 
+- A aplicação foi desenvolvida com intuito de praticar o consumo de API externas, para que serem apresentadas no Frontend
 
 ## Demostração
 ![Untitled.png](apresentacaoDash.gif)
